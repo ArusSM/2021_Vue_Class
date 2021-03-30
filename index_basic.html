@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue basic</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+
+<style>
+    * {
+        text-decoration: none;
+        color: #333;
+    }
+</style>
+<body>
+    <div id="app">
+        {{person.name}} <br>
+        {{person.age}} <br>
+        {{nextYear(inputData)}} <br>
+        <input :type="type" :value="inputData"> <br>
+        <a :href="link" target="_blank">디씨로 가보자가보자드가자드가자~</a> <br>
+        <a :href="getChannelLink('watch?v=0WQ78mAN4Do')" target="_blank">유튜브로 가보자가보자드가자드가자~</a> <!-- 바인딩 -->
+        <!-- <input v-bind:type="type" v-bind:value="inputData"> -->
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                person : {
+                name : 'yyhs',
+                age : 34
+                },
+                inputData : 'Hello',
+                type : 'text',
+                link : 'https://www.dcinside.com',
+                clink : 'https://www.youtube.com/'
+            },
+            methods: {
+                nextYear : function(greeting) {
+                    return greeting + ' | ' + this.person.name + '은(는) 내년에 ' + (this.person.age+1) + '살 입니다.'
+                },
+                getChannelLink(channel) {
+                    return this.clink + channel;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

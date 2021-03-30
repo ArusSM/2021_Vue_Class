@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+     <!-- <button v-on:click="myAlert()">Click Me</button> <br> -->
+
+     {{year}} <br>
+     <button @click="plus()">증가</button>
+     <button @click="minus()">감소</button> <br>
+
+     <form v-on:submit.prevent="submit()">
+         <input type="text"> <br>
+         <button type="submit">제출</button>
+     </form>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+              year : 2021
+
+            },
+            methods: {
+                myAlert() {
+                    alert('Hello. take a look.');
+                },
+                plus() {
+                    this.year++;
+                },
+                minus() {
+                    this.year--;
+                },
+                submit() {
+                    console.log("take a look~");
+                    alert('submited');
+                }
+            }
+        })
+    </script>
+</body>
+</html>
