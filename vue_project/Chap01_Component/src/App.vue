@@ -3,6 +3,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <h1>Vue Component</h1>
+    <A07Form></A07Form>
     <A06StyleClass></A06StyleClass>
     <A05Event></A05Event>
     <A04LifeCycle></A04LifeCycle>
@@ -20,6 +21,7 @@
   import A04LifeCycle from './components/A04.LifeCycle.vue'
   import A05Event from './components/A05.Event.vue'
   import A06StyleClass from './components/A06.StyleClass.vue'
+  import A07Form from './components/A07.Form.vue'
 
 export default {
   name: 'App',
@@ -30,6 +32,7 @@ export default {
     A04LifeCycle,
     A05Event,
     A06StyleClass,
+    A07Form,
     // Currency
   }
 }
